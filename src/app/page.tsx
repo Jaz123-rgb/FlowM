@@ -12,7 +12,7 @@ const Home = () => {
   const audioList = [
     { src: "/no-creo-en-el-destino-video-casero.mp3", title: "Audio 1" },
     { src: "/Kurt-NQSTA.mp3", title: "Audio 2" },
-    { src: "/Reloj-Ingrato-José-el-Toro.mp3", title: "Audio 3" },
+    { src: "/Reloj.mp3", title: "Audio 3" },
   ];
 
   useEffect(() => {
