@@ -1,11 +1,11 @@
 :root {
-  --background: #000000; /* Cambiado a negro */
+  --background: #0a0a0a; /* Cambiado a negro */
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a; /* Mantener oscuro en modo oscuro */
+    --background: #171717; /* Mantener oscuro en modo oscuro */
     --foreground: #ededed;
   }
 }

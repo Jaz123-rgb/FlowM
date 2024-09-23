@@ -16,6 +16,12 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Flores para Mar</h1>
+      <h3 className={styles.subtitle}>Dale play &#128151;</h3>
+      <h4 className={styles.subtext}>(si puedes, usa audifonos)</h4>
+      <audio autoPlay loop controls className={styles.audio}>
+        <source src="/Kurt-NQSTA.mp3" type="audio/mpeg" />
+        Tu navegador no soporta la etiqueta de audio.
+      </audio>
       <div className={styles.flowersContainer}>
         {show && (
           <>
