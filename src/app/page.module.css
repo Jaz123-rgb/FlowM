@@ -4,46 +4,48 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto; /* Cambiado a auto para que se ajuste a su contenido */
   background-color: #171717; /* Fondo oscuro */
   padding: 20px; /* Espaciado alrededor del contenedor */
+  overflow: hidden; /* Evitar desbordamiento en dispositivos pequeños */
 }
 
 .title {
   font-size: 2.5rem;
   color: #ffffff; /* Color de texto blanco */
-  margin-bottom: 20px; /* Espacio debajo del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  text-align: center; /* Centrar texto */
 }
 
 .subtitle {
   color: #ffffff; /* Color de texto blanco */
   margin: 15px 0; /* Espacio arriba y abajo del h3 */
+  text-align: center; /* Centrar texto */
 }
 
 .subtext {
   color: #ffffff; /* Color de texto blanco */
   margin: 10px 0; /* Espacio arriba y abajo del h4 */
+  text-align: center; /* Centrar texto */
 }
 
 .audio {
   margin: 20px 0; /* Espacio arriba y abajo del audio */
+  width: 90%; /* Asegurarse de que el audio no ocupe todo el ancho */
+  max-width: 600px; /* Ancho máximo para la barra de audio en pantallas grandes */
 }
 
 .flowersContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en general */
   gap: 20px; /* Espacio entre los elementos */
   justify-items: center;
-}
-
-.flowersContainer svg {
-  margin: 10px; /* Espaciado adicional entre cada SVG */
+  margin-top: 20px; /* Espacio arriba del contenedor de flores */
 }
 
 /* Pirámide */
 .flowersContainer svg:nth-child(1) {
-  grid-column: 1 / 3;
+  grid-column: 1 / 3; /* Ocupa las dos columnas en la primera fila */
 }
 
 /* Animación de rotación de la flor */
@@ -78,26 +80,43 @@
 }
 
 /* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  /* Pantallas de laptop */
+  .flowersContainer {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en laptops */
+  }
+}
+
 @media (max-width: 768px) {
-  .container {
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
-    padding: 10px; /* Menos espaciado alrededor */
-  }
-
-  .title {
-    font-size: 2rem; /* Tamaño de fuente más pequeño */
-  }
-
-  .subtitle,
-  .subtext {
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño para subtítulos */
-  }
-
-  .audio {
-    width: 100%; /* Asegurarse de que el audio se ajuste al contenedor */
-  }
-
   .flowersContainer {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
+}
+
+.button {
+  background-color: grey; /* Color de fondo para botones no seleccionados */
+  border: 1px solid #ccc;
+  padding: 10px 20px; /* Puedes ajustar el padding según lo necesites */
+  margin: 5px;
+  cursor: pointer;
+  color: white; /* Color del texto */
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Transición suave */
+  width: 150px; /* Ancho fijo para igualar tamaños */
+  height: 50px; /* Altura fija para igualar tamaños */
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: bold; /* Hacer la letra más gruesa */
+  font-size: 16px; /* Aumentar el tamaño de la letra */
+}
+
+.activeButton {
+  background-color: white; /* Color de fondo cuando está activo */
+  border: 1px solid yellow; /* Color del borde */
+  color: black; /* Color del texto */
+  width: 150px; /* Ancho fijo para igualar tamaños */
+  height: 50px; /* Altura fija para igualar tamaños */
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: bold; /* Hacer la letra más gruesa */
+  font-size: 16px; /* Aumentar el tamaño de la letra */
 }
