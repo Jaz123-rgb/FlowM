@@ -16,6 +16,9 @@ const Home = () => {
     { src: "/FLORECER.mp3", title: "Audio 4" },
     { src: "/Maye.mp3", title: "Audio 5" },
     { src: "/Santi.mp3", title: "Audio 6" },
+    { src: "/Rubytates.mp3", title: "Audio 7" },
+    { src: "/Simon.mp3", title: "Audio 8" },
+    { src: "/Uno.mp3", title: "Audio 9" },
   ];
 
   useEffect(() => {
