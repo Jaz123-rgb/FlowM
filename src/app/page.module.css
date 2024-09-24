@@ -120,3 +120,69 @@
   font-weight: bold; /* Hacer la letra más gruesa */
   font-size: 16px; /* Aumentar el tamaño de la letra */
 }
+
+.audioControls {
+  max-height: 200px; /* Limitar la altura máxima del contenedor */
+  overflow-y: auto; /* Habilitar desplazamiento vertical */
+  width: 100%; /* Ancho total disponible */
+  max-width: 400px; /* Ancho máximo para que no ocupe todo el width en laptop */
+  display: flex;
+  flex-direction: column; /* Alinear los botones en columna (vertical) */
+  align-items: center; /* Centrar los botones horizontalmente */
+  padding: 10px; /* Espacio interior */
+  background-color: #202020; /* Color de fondo para el contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Estilos para centrar la lista de botones */
+.audioControls > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Asegurarse de que el contenedor de botones se ajuste */
+}
+
+/* Añadir margen a los botones */
+.button {
+  background-color: grey; /* Color de fondo para botones no seleccionados */
+  border: 1px solid #ccc;
+  padding: 10px 20px; /* Puedes ajustar el padding según lo necesites */
+  margin: 10px 0; /* Aumentar el margen entre botones */
+  cursor: pointer;
+  color: white; /* Color del texto */
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Transición suave */
+  width: 150px; /* Ancho fijo para igualar tamaños */
+  height: 50px; /* Altura fija para igualar tamaños */
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: bold; /* Hacer la letra más gruesa */
+  font-size: 16px; /* Aumentar el tamaño de la letra */
+}
+
+.activeButton {
+  background-color: white; /* Color de fondo cuando está activo */
+  border: 1px solid yellow; /* Color del borde */
+  color: black; /* Color del texto */
+  width: 150px; /* Ancho fijo para igualar tamaños */
+  height: 50px; /* Altura fija para igualar tamaños */
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: bold; /* Hacer la letra más gruesa */
+  font-size: 16px; /* Aumentar el tamaño de la letra */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  /* Pantallas de laptop */
+  .flowersContainer {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .flowersContainer {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}

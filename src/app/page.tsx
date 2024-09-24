@@ -12,7 +12,10 @@ const Home = () => {
   const audioList = [
     { src: "/no-creo-en-el-destino-video-casero.mp3", title: "Audio 1" },
     { src: "/Kurt-NQSTA.mp3", title: "Audio 2" },
-    { src: "/Reloj.mp3", title: "Audio 3" },
+    { src: "/Juanpalitoschinos.mp3", title: "Audio 3" },
+    { src: "/FLORECER.mp3", title: "Audio 4" },
+    { src: "/Maye.mp3", title: "Audio 5" },
+    { src: "/Santi.mp3", title: "Audio 6" },
   ];
 
   useEffect(() => {
@@ -43,18 +46,22 @@ const Home = () => {
       </audio>
       <div className={styles.audioControls}>
         <h5>Selecciona un audio:</h5>
-        {audioList.map((audio, index) => (
-          <button
-            key={index}
-            onClick={() => changeAudio(index)}
-            className={
-              currentAudioIndex === index ? styles.activeButton : styles.button
-            } // Cambia de color
-          >
-            {audio.title}
-          </button>
-        ))}
-      </div>
+        <div>
+          {audioList.map((audio, index) => (
+            <button
+              key={index}
+              onClick={() => changeAudio(index)}
+              className={
+                currentAudioIndex === index
+                  ? styles.activeButton
+                  : styles.button
+              }
+            >
+              {audio.title}
+            </button>
+          ))}
+        </div>
+      </div>{" "}
       <div className={styles.flowersContainer}>
         {show && (
           <>
